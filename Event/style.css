@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    background-color: #8391A8;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+/* HEADER AND NAVBAR */
+header{
+    /* background-color: aqua; */
+    padding: 10px 40px;
+    display: flex;
+    justify-content: center;
+    
+}
+header div{
+    /* background-color: red; */
+    width: 50%;
+    text-align: center;
+}
+#branding {
+    width: 100%;
+    padding: 10px;
+    font-size: 22px;
+    letter-spacing: 3px;
+    color: #222;
+}
+#navbar{
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    /* background-color: green; */
+}
+#navbar a{
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    padding: 4px 15px;
+    transition: all ease-in-out 200ms;
+}
+#navbar a:hover{
+    font-weight: bolder;
+    color: #5f5144
+}
+
+
+/* MAIN CONTAINER*/
+#main {
+    margin: 25px 200px;
+    color: white;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+    box-shadow: none;
+    transition: all ease-in-out 200ms;
+    /* margin-bottom: 90px; */
+}
+
+#container{
+    /* background-color: #5f5144; */
+    /* border-radius: 5px; */
+    width: 100%;
+    padding: 15px 30px;
+    position: relative;
+    letter-spacing: 1.2px;
+    color: #333;
+    /* text-align: justify; */
+} 
+#container h1{
+    padding: 5px 0px;
+    text-decoration: underline;
+    /* text-transform: uppercase; */
+}  
+
+
+/* IMAGE SECTION */
+
+#image {
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    border-left: 3px solid wheat;
+}
+#image img{
+    padding: 20px;
+    width: 75%;
+    /* border-left: 4px solid #DECBA4; */
+    border-radius: 50%;
+}
+
+/* ACHIEVMENTS */
+
+#works{
+    /* margin-top: 0px; */
+    width: auto;
+    background-color: rgb(238, 238, 238);
+    margin-top: 90px;
+}
+#head {
+    padding: 10px 15px;
+    width: auto;
+    
+}
+#head h1{
+    text-align: center;
+    padding: 20px;
+}
+#head p{
+    text-align: justify;
+}
+#achievments{
+    width: auto;
+    padding: 40px;
+    /* background-color: aqua; */
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.pics {
+    padding: 10px;
+    background-color: #AFB2B6;
+    border-radius: 7px;
+    width: 30%;
+    height: 30%;
+    margin: 10px;
+    margin-bottom: 20px;
+    transition: all ease-in-out 200ms;
+    scale: 100%;
+}
+.pics img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.pics:hover {
+    
+    scale: 105%;
+}
+footer{
+    margin-top: 40px;
+    text-align: center;
+}
+
+/* EVENTS SECTION */
+
+#events{
+    background-color: aliceblue;
+    width: 100%;
+    max-height: 85%;
+    padding: 5px 3px;
+    border-radius: 5px;
+    overflow-y: scroll;
+}
+
+.eventBox{
+    border-radius: 5px;
+    font-family: 'Tilt Neon', sans-serif;
+    letter-spacing: 2px;
+    width: auto;
+    margin: 2px;
+    background-color: #5f5144;
+    color: #e7e7e7;
+    padding: 7px 0px;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+/* SCROLL BAR */
+
+::-webkit-scrollbar{
+    background-color: white;
+    width: 5px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #5f5144;
+    border-radius: 10px;
+}
+
+
+/* RESPONSIVITY */
+
+@media screen and (max-width: 1535px)
+{
+    /* MAIN CONTAINER*/
+    #main {
+        /* margin: 25px 100px; */
+        width: 100%;
+        margin: 0px;
+        color: white;
+        
+    }
+
+}
+
+@media screen and (max-width: 1180px)
+{
+    #image{
+        /* background-color: red; */
+        width: 50%;
+    }
+    
+    #container{
+        /* background-color: blue; */
+        width: 75%;
+    }
+    .pics{
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 940px)
+{
+    header div{
+        /* background-color: aqua; */
+        /* padding: 10px 40px; */
+        width: 100%;
+        /* background-color: red; */
+        display: flex;
+        justify-content: center;
+        flex-direction: column; 
+    }
+    #navbar{
+        display: flex;
+        flex-direction: row;
+    }
+    #branding {
+        /* background-color: blue; */
+        width: 100%;
+    }
+    #navbar {
+        /* background-color: aqua; */
+        width: 100%;
+    }
+    #main{
+        margin: 0px;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+
+    }
+    #container{
+        
+        width: auto;
+        
+    }
+    #image{
+        border: none;
+        width: auto;
+    }
+    #image img{
+        width: 30%;
+    }
+    .pics {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 650px)
+{
+    #branding h1{
+        font-size: 30px;
+    }
+    #navbar{
+        flex-direction: column;
+        justify-content: center;
+        /* background-color: #5f5144; */
+    }
+    
+    #image img{
+        width: 60%;
+    }
+    #events{
+        background-color: transparent;
+        overflow: hidden;
+    }
+    .eventBox{
+        padding: 5px 7px;
+        font-size: 10px;     
+    }
+    .pics{
+        width: 100%;
+    }
+}
