@@ -1,114 +1,134 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-footer{
-    background: linear-gradient(to right,#00093c,#00093c,#f1cc0f) ;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    color: #fff;
-    padding: 100px 0 30px;
-    border-top-left-radius:125px;
-    font-size:14px;
-    line-height: 20px;
-    font-family: 'Roboto', sans-serif;
-}
-.row{
-    width:85%;
-    margin:auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content:space-between;
-}
-.col{
-    flex-basis: 25%;
-    padding: 10px;
-}
-.logo{
-    width: auto;
-    height: auto;
-    padding-bottom: 20px;
+footer {
+  background: linear-gradient(to right, #00093c, #00093c, #f1cc0f);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  padding: 100px 0 30px;
+  border-top-left-radius: 125px;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: 'Roboto', sans-serif;
 }
 
-.link a{
-    text-decoration: none;
-    color: #fff;
+.row {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
 }
-.link:hover{
-    border-bottom: 1px solid #fff;
+
+.col {
+  flex-basis: 25%;
+  padding: 10px;
+}
+.col:nth-child(2){
+  flex-basis: 30%;
+}
+.logo {
+  width: auto;
+  height: auto;
+  padding-bottom: 20px;
+}
+
+.link a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.link:hover {
+  border-bottom: 1px solid #fff;
 }
 
 
-.wrapper .icon{
-    position: relative;
-    background-color: #ffffff;
-    border-radius: 50%;
-    margin: 10px;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
-    font-size: 22px;
-    display: inline-block;
-    text-align: center;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    color: #333;
-    text-decoration: none;
+.wrapper .icon {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 50%;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 22px;
+  display: inline-block;
+  text-align: center;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  color: #333;
+  text-decoration: none;
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  line-height: 1.5;
+  font-size: 14px;
+  background-color: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background-color: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+
+  background-color: #46c1f6;
+  color: #ffffff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background-color: #e12b68;
+  color: #ffffff;
+}
+
+.wrapper .linkedin:hover,
+.wrapper .linkedin:hover .tooltip,
+.wrapper .linkedin:hover .tooltip::before {
+  background-color: #441dc2;
+  color: #ffffff;
+}
+@media (max-width:700px){
+  footer{
+  bottom: unset;
   }
-  
-  .wrapper .tooltip {
-    position: absolute;
-    top: 0;
-    line-height: 1.5;
-    font-size: 14px;
-    background-color: #ffffff;
-    color: #ffffff;
-    padding: 5px 8px; 
-    border-radius: 5px;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  .col{
+    flex-basis:100%;
+    text-align:center;
   }
-  .wrapper .tooltip::before {
-    position: absolute;
-    content: "";
-    height: 8px;
-    width: 8px;
-    background-color: #ffffff;
-    bottom: -3px;
-    left: 50%;
-    transform: translate(-50%) rotate(45deg);
-    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  }
-  .wrapper .icon:hover .tooltip {
-    top: -45px;
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-  }
-  .wrapper .icon:hover span,
-  .wrapper .icon:hover .tooltip {
-    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
-  }
-  
-  .wrapper .twitter:hover,
-  .wrapper .twitter:hover .tooltip,
-  .wrapper .twitter:hover .tooltip::before {
-  
-    background-color: #46c1f6;
-    color: #ffffff;
-  }
-  .wrapper .instagram:hover,
-  .wrapper .instagram:hover .tooltip,
-  .wrapper .instagram:hover .tooltip::before {
-    background-color: #e12b68;
-    color: #ffffff;
-  }
-  .wrapper .linkedin:hover,
-  .wrapper .linkedin:hover .tooltip,
-  .wrapper .linkedin:hover .tooltip::before {
-    background-color: #441dc2;
-    color: #ffffff;
-  }
+}
