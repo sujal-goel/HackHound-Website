@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | HackHound</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="logo.jpeg">
+</head>
+<body>
+    <div class="front-image">
+        <div class="centered-texts">
+            <span class="large-text">Contact Us</span>
+            <span class="small-text">"Communication leads to community, that is, to understanding, intimacy, and mutual valuing." </span>
+            <div style="margin-top: 20px;">
+                <a href="" style="color: white;">Contact Us</a> / <a href="" style="color: white;">Home</a></span>
+            </div>
+          </div>
+    </div>
+
+
+    <div class="container">
+        <form onsubmit="sendEmail(); reset(); return false;">
+            <span class="form-heading">GET IN TOUCH</span>
+            <input type="text" id="name" placeholder="Your Good Name" required>
+            <input type="email" id="email" placeholder="Email Id" required>
+            <input type="text" id="Phone" placeholder="Contact No." required>
+            <textarea id="message" rows="6" style="font-family: 'Roboto', sans-serif;" placeholder="Your Message"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
