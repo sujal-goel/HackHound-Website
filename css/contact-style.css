@@ -40,7 +40,7 @@ body {
 
 
 .front-image{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url(front-image.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url(../Images/front-image.jpg);
     height: 100vh;
     width: 100%;
     /* Image is centered vertically and horizontally at all times */
@@ -58,7 +58,7 @@ body {
     .front-image{
       /* The file size of this background image is 93% smaller
        * to improve page load speed on mobile internet connections */
-       background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url(front-image-mob.jpg);
+       background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url(/Images/front-image-mob.JPG);
     }
       }
 
@@ -98,7 +98,7 @@ body {
     width: 100%;
     height: 100vh;
     margin-top: 80px;
-    background-image: url("design.png");
+    background-image: url("../Images/design.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
