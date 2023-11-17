@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/contact-style.css">
 </head>
 <body>
-    <div class="front-image">
+    <!-- <div class="front-image">
         <div class="centered-texts">
             <span class="large-text">Contact Us</span>
             <span class="small-text">"Communication leads to community, that is, to understanding, intimacy, and mutual valuing." </span>
@@ -17,15 +17,24 @@
                 <a href="" style="color: white;">Contact Us</a> / <a href="/HackHound-Website/index.html" style="color: white;">Home</a></span>
             </div>
           </div>
-    </div>
+    </div> -->
 
+    <nav>
+        <a href="/HackHound-Website/index.html">Home</a>
+        <a href="/HackHound-Website/ourteam.html">Our Team</a>
+        <!-- <a href="#">Events</a> -->
+        <!-- <a href="#">FAQs</a> -->
+        <a href="/HackHound-Website/index.html#sec">About Us</a>
+        <a href="/HackHound-Website/contact.html">Contact Us</a>
+        <!-- <span></span> -->
+    </nav>
 
     <div class="container">
         <form onsubmit="sendEmail(); reset(); return false;">
             <span class="form-heading">GET IN TOUCH</span>
             <input type="text" id="name" placeholder="Your Good Name" required>
             <input type="email" id="email" placeholder="Email Id" required>
-            <input type="text" id="Phone" placeholder="Contact No." required>
+            <input type="text" id="phone" placeholder="Contact No." required>
             <textarea id="message" rows="6" style="font-family: 'Roboto', sans-serif;" placeholder="Your Message"></textarea>
             <button type="submit">Submit</button>
         </form>
