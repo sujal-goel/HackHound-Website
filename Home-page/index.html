@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackhound</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+      </style>
+</head>
+<body>
+    <div class="page">
+        <nav>
+            <ul>
+               <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <div class="color-box"></div>
+                <span></span>
+            </ul>
+        </nav>
+    </div>
+    <div class="parallax">
+    <section>
+        <img src="Images/stars.png" id="stars">
+        <img src="Images/image (2).png" id="moon">
+        <img src="Images/mountains_behind.png" id="mountains-behind">
+        <h3 id="text">HACKHOUND</h3>
+        <a href="#sec" id="btn">Know more...</a>
+        <img src="Images/mountains_front.png" id="mountains-front">
+    </section>
+
+    <div id="sec">
+        <h2>Know About Hackhound</h2>
+        <p>"HackHound," the esteemed technical coding club of SRMIST NCR, has established itself as a prominent hub for tech enthusiasts within the university. With a history of remarkable accomplishments and a dedication to nurturing talent, the club has played a pivotal role in fostering a vibrant coding and technology ecosystem at SRM.</p><br>
+        <p> HackHound's most notable achievements include organizing a diverse array of events, including high-energy hackathons. These hackathons are platforms where innovative minds converge to tackle real-world problems, fostering creativity, problem-solving skills, and teamwork among participants. The club's commitment to delivering well-executed, challenging hackathons has earned it a reputation for excellence.</p><br>
+        <p>Beyond hackathons, HackHound takes pride in its role as an educational facilitator. It has organized workshops such as "Coding Blocks," which cater to the academic and professional growth of its members. Participating in renowned events like MLH (Major League Hacking) workshops further strengthens its commitment to enhancing the technical skills of students, keeping them updated with the latest industry trends</p><br>
+        <p>HackHound is known for its inclusive approach. It provides a welcoming space for students from diverse backgrounds, skill levels, and fields of study. The club's commitment to inclusivity fosters a dynamic and enriching environment for learning and collaboration, ensuring that everyone has an opportunity to grow and contribute.</p><br>
+        <p>HackHound places a strong emphasis on ethical coding practices. It encourages its members to understand the ethical implications of their work and to code responsibly. The club's focus on ethical tech use ensures that its members not only become proficient coders but also responsible and conscientious technologists.</p><br>
+        <p>In summary, HackHound serves as a beacon of innovation and learning at SRM, offering an inclusive and inspiring space for students to explore the world of coding and technology. Its history of successful hackathons, educational workshops, and community engagement initiatives underlines its commitment to empowering its members. As it continues to grow and evolve, HackHound remains dedicated to shaping the future of technology and nurturing the next generation of coders and problem-solvers at SRM.</p>          
+    </div>
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains-behind');
+        let text=document.getElementById('text')
+        let btn= document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+                
+        
+window.addEventListener('scroll', function () {
+    
+    let value = window.scrollY;
+    stars.style.left = value * 0.25 + 'px';
+    moon.style.top = value * 1.05 + 'px';
+    mountains_behind.style.top = value * 0.5 + 'px';
+    mountains_front.style.top = value * 0 + 'px';
+    text.style.marginRight = value*4 + 'px';
+    text.style.marginLeft = value*1.5 + 'px';
+    btn.style.marginTop = value*1.5 + 'px';
+})
+</script>
+</div>
+<div class="mission">
+<div class="elementContainer">
+    <img class="logo" src="Images/logo.jpg" alt="Logo" width="600px" height="600px">
+    <div class="left"></div>
+    <div class="right"></div>
+</div>
+<div class="animated">  
+    <h6 data-text="Our  ">Our </h6>
+    <h6 data-text="Mission... "> Mission...</h6>
+</div>
+<div class="textbox">
+<p class="textm">The mission of our college's Technical Coding Club is to serve as a catalyst for knowledge and innovation, fostering a vibrant and inclusive community of aspiring technologists. We are committed to equipping our members with cutting-edge technical skills, creating a space for collaborative learning and problem-solving. Through a series of workshops, including Coding Blocks, MLH (Major League Hacking) events, and hackathons, we aim to empower our members with the expertise needed to excel in the ever-evolving field of technology. Our club strives to inspire creativity, encourage interdisciplinary collaboration, and provide mentorship for students at all skill levels. By engaging in these activities, we not only prepare our members for promising careers but also contribute to the broader tech ecosystem, addressing real-world challenges and ethical considerations in the world of coding. We are dedicated to leaving a lasting impact on our members and the greater community, promoting a culture of excellence and responsible technological innovation.<p>
+</div>
+</div>
+
+    <script>
+        // JavaScript to trigger the animation after the page loads
+        window.onload = function () {
+            const container = document.querySelector('.container');
+            const leftBlock = document.querySelector('.left-block');
+            const rightBlock = document.querySelector('.right-block');
+            const logo = document.querySelector('.logo');
+    
+            setTimeout(() => {
+                container.classList.add('animation-started');
+                leftBlock.classList.remove('animate');
+                rightBlock.classList.remove('animate');
+                setTimeout(() => {
+                    leftBlock.style.display = 'none';
+                    rightBlock.style.display = 'none';
+                    logo.style.display = 'block';
+                }, 2000); // Adjust the timing as needed
+            }, 2000); // Adjust the timing as needed
+        };
+    </script>
+    <div class="final">
+        <footer>
+            <div class="waves">
+                <div class="wave" id="wave1"></div>
+                <div class="wave" id="wave2"></div>
+                <div class="wave" id="wave3"></div>
+                <div class="wave" id="wave4"></div>
+            </div>
+            <ul class="social-icons">
+                <li>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                </li>
+            </ul>
+            <ul class="menu">
+                <li>
+                    
+                    <a href="#">About Us</a>
+                    <a href="#">Our Team</a>
+                    <a href="#">Events</a>
+                    <a href="#">FAQs</a>
+                    <a href="#">Contact Us</a>
+                </li>
+            </ul>
+        </footer>
+    </div>
+</body>
+</html>

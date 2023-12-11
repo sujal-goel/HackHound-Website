@@ -1,0 +1,449 @@
+*{
+  font-family: 'Roboto',sans-serif;
+  margin: 0px;
+  padding: 0px;
+ box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.parallax{
+  min-height: 100vh;
+  background: linear-gradient(#2b1055,#7597de);
+  overflow-x:hidden;
+}
+nav {
+  background-color: white;
+  text-align: center;
+  height: 50px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+nav li {
+  padding: 15px;
+  position: relative;
+}
+
+nav li a {
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  padding: 15px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Create a pseudo-element for the color box */
+nav li::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  background: linear-gradient(to top, #cc208e 0%, #6713d2 100%);
+  width: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 8px;
+  transition: width 0.3s ease, left 0.3s ease; /* Transition both width and left */
+}
+
+nav li:hover::before {
+  width: 100%; /* Expand the color box width */
+  left: 0; /* Reset the left position */
+}
+
+@media (max-width: 768px) {
+  nav ul {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  nav li a {
+      padding: 15px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav li::before {
+      left: 0;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  nav li:nth-child(2)::before {
+      left: 33.333%;
+  }
+  nav li:nth-child(3)::before {
+      left: 66.666%;
+  }
+}
+
+.elementContainer:hover .left{
+  width: 0px;
+}
+.elementContainer:hover .right{
+  width: 0px;
+}
+.elementContainer:hover::after{
+  opacity: 0;
+  transition:  opacity 0.2s 0s;
+}
+.elementContainer{
+  margin-top: 5px;
+  background: white;
+  background-image: white;
+  min-height: 1em;
+  position: relative;
+  text-align: center;
+  color: black;
+  cursor: pointer;
+  min-width: 60px;
+  padding: 0 4px;
+  margin-right: 50px;
+  float: left;
+}
+
+.elementContainer::after {
+  font-size: 1em;
+  display: inline;
+  position: absolute;
+  width: 50%;
+  text-align: center;
+  top: 100%;
+  transform: translateY(-58%);
+  left: 0;
+  transition: opacity 0.5s 0.5s;
+}
+
+.elementContainer .logo{
+  padding:70px;
+  transition: background-color 0.3s;
+}
+.elementContainer .logo:hover {
+  background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
+  border-radius: 30px;
+}
+
+.left,.right {
+  min-height: 1em;
+  background: white;
+  background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  transition: 1s;
+  width: 50%;
+}
+.left{
+  left: 0px;
+  
+}
+.right{
+  right: 0px;
+}
+.textbox{
+  padding-top: 50px;
+  padding-left: 500px;
+ }
+
+section{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  
+}
+
+section img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+section img#moon{
+  mix-blend-mode: screen ;
+
+}
+
+#text {
+  position: absolute;
+  color: white;
+  white-space: nowrap;
+  font-size: 8vw;   
+  z-index: 19;
+ color: transparent;
+ -webkit-text-stroke: 1px #fff;
+ background: url(Images/back.png);
+ background-clip: border-box;
+ -webkit-background-clip: text;
+ background-position: 0 0;
+ animation: back 20s linear infinite;
+}
+@keyframes back{
+  100%{
+    background-position: 2000px 0;
+  }
+}
+
+section img#mountains-front
+{
+z-index: 10;
+}
+
+section::before
+{
+  content: '';
+  position:absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top,#1c0522,transparent);
+  z-index: 100;
+
+}
+
+#sec{
+  position: relative;
+  padding: 100px;
+  background: #1c0522;
+}
+
+#sec h2{
+  font-size: 3.5em;
+  color: white;
+  margin-bottom: 10px;
+}
+
+#sec p{
+  font-size: 1.2em;
+  color: white;
+
+}
+
+#btn{
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 30px;
+  border-radius: 40px;
+  background: white;
+  color: #2b1055;
+  font-size: 1.5em;
+  z-index: 19;
+  transform: translateY(100px);
+
+}
+
+.final{
+  position: relative;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  min-height: 100vh;
+  width: 100%;
+}
+
+footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: radial-gradient(939px at 0.7% 2.4%, rgb(116, 106, 255) 50%, rgb(229, 210, 246) 100.2%);
+  height: 190px;
+  padding: 0px 0px;
+  flex-direction: column;
+}
+
+footer .social-icons,
+footer .menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+footer .social-icons li,
+footer .menu li {
+  list-style: none;}
+
+footer .social-icons li a {
+  font-size: 2em;
+  color: black;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+
+footer .social-icons li a {
+  transform: translateY(-10px);
+}
+
+footer .menu li a {
+  font-size: 1.4em;
+  color: black;
+  margin: 0 10px;
+  display: inline-block;
+  text-decoration: none;
+  opacity: 0.75;
+  transition: 0.5s;
+  font-weight: bold;
+}
+
+footer .menu li a:hover {
+
+  opacity: 1;
+}
+
+footer p {
+  color: #fff;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  opacity: 0.75;
+}
+
+
+footer .wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: #fff url(Images/wave1.png);
+  background-size: 1000px 100px;
+
+}
+
+footer .wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animatewave 4s linear infinite;
+}
+footer .wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 0;
+  animation: animatewave-02 4s linear infinite;
+}
+footer .wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animatewave-02 3s linear infinite;
+}
+footer .wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animatewave-02 3s linear infinite;
+}
+
+
+@keyframes animatewave {
+  0% {
+      background-position-x: 1000px;
+  }
+
+  100% {
+      background-position-x: 0px;
+  }
+
+}
+@keyframes animatewave-02 {
+  0% {
+      background-position-x: 0px;
+  }
+
+  100% {
+      background-position-x: 1000px;
+  }
+
+}
+
+
+.zoom li a {
+  transition: 1s;
+}
+
+.zoom li a:hover {
+  transform: scale(1.1);
+}
+
+.animated{
+  box-sizing: border-box;
+  position: relative;
+  margin-top: 100px;
+  margin-left: 650px;
+  width : 500px;
+  height:20vh;
+  background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
+}
+.animated h6{
+  font-size: 40px;
+}
+.animated h6{
+  background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
+  position: relative;
+  background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
+    -webkit-text-stroke: 0.3vw  linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
+  text-transform: uppercase;
+}
+.animated h6::before{
+  content:attr(data-text);
+  position: absolute;
+  color: white;
+  -webkit-text-stroke: 0vw linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
+  border-right: 2px solid  white;
+  overflow: hidden;
+  animation: animate 6s linear infinite;
+}
+
+@keyframes animate{
+  0%,10%,100%
+  {
+      width: 0;
+  }
+  70%,90%{
+      width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column; /* Stack the links vertically */
+    align-items: flex-start; /* Align links to the left */
+  }
+
+  nav a {
+    padding: 10px; /* Adjust the padding for smaller screens */
+  }
+
+  nav a:nth-child(1):hover ~ span,
+  nav a:nth-child(2):hover ~ span,
+  nav a:nth-child(3):hover ~ span,
+  nav a:nth-child(4):hover ~ span,
+  nav a:nth-child(5):hover ~ span,
+  nav a:nth-child(6):hover ~ span {
+    width: 100%; /* Make the highlight box full width */
+  }
+}
