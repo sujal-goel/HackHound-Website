@@ -47,9 +47,10 @@ html {
 
 nav {
   position: relative;
+
   width: 100%;
   height: 50px;
-  background: transparent;
+  background: white;
   border-radius: 8px;
   display: flex;
   justify-content: center;
@@ -66,7 +67,9 @@ nav a {
   padding: 0 23px;
   z-index: 1;
 }
-
+#menu{
+  left:0;
+}
 nav span {
   position: absolute;
   top: 0;
@@ -118,7 +121,7 @@ nav a:nth-child(6):hover~span {
 }
 
 .elementContainer {
-  margin-top: 5px;
+  margin-top: -10%;
   background: white;
   background-image: white;
   min-height: 1em;
@@ -127,7 +130,7 @@ nav a:nth-child(6):hover~span {
   color: black;
   cursor: pointer;
   min-width: 60px;
-  padding: 0 4px;
+  padding: 0 0.4%;
   margin-right: 50px;
   float: left;
 }
@@ -176,8 +179,12 @@ nav a:nth-child(6):hover~span {
 }
 
 .textbox {
-  padding-top: 50px;
-  padding-left: 500px;
+  padding-top: 40px;
+ padding-right:7%;
+ text-align: justify;
+text-justify: inter-word;
+margin-left:63%;
+/* color: white; */
 }
 
 section {
@@ -247,12 +254,15 @@ section::before {
   position: relative;
   padding: 100px;
   background: #1c0522;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 #sec h2 {
+  text-align: center;
   font-size: 3.5em;
   color: white;
-  margin-bottom: 10px;
+  margin-bottom: 6%;
 }
 
 #sec p {
@@ -271,7 +281,7 @@ section::before {
   font-size: 1.5em;
   z-index: 19;
   transform: translateY(100px);
-
+  text-align:center;
 }
 
 .images {
@@ -349,7 +359,8 @@ footer {
   background: rgb(116, 106, 255);
   /* background: radial-gradient(939px at 0.7% 2.4%, rgb(116, 106, 255) 50%, rgb(229, 210, 246) 100.2%); */
   height: 190px;
-  padding: 0px 0px;
+  padding: 0 0;
+  margin-top: 20%;
   flex-direction: column;
 }
 
@@ -480,8 +491,8 @@ footer .wave#wave4 {
 .animated {
   box-sizing: border-box;
   position: relative;
-  margin-top: 100px;
-  margin-left: 650px;
+  margin-top: 60px;
+  margin-left: 60%;
   width: 500px;
   height: 20vh;
   background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
@@ -489,12 +500,12 @@ footer .wave#wave4 {
 
 .animated h6 {
   font-size: 40px;
+  /* text-align: center; */
 }
 
 .animated h6 {
   background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
   position: relative;
-  background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
   -webkit-text-stroke: 0.3vw linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
   text-transform: uppercase;
 }
@@ -521,4 +532,47 @@ footer .wave#wave4 {
   90% {
     width: 100%;
   }
+}
+@media(max-width:1047px){
+.elementContainer{
+  width:100%;
+  margin-top:4px;
+}
+.elementContainer .logo{
+  padding:2%;
+  width:75%;
+  height: 60%;
+}
+.animated{
+ margin-left:0%;
+ margin-top:6%;
+ display:grid;
+ position:relative;
+ width:100%;
+ text-align: center;
+}
+
+/* .animated h6:nth-child(1){
+  margin-right:50%;
+}
+.animated h6:nth-child(2){
+  margin-left:50%;
+  margin-top:-10%;
+
+} */
+.animated h6::before{
+  animation: none;
+  position: absolute;
+  border-right: none; 
+ }
+  .textbox{
+  padding:3%;
+  justify-content: center;  
+  display: block;
+  margin-top:9%;
+  margin-left:0;
+  }
+#sec{
+  padding:4%;
+}
 }
